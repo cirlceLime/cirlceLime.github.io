@@ -53,3 +53,9 @@ $('.anticon-minus').click(function(){
   }
   $('#item_count').html(value);
 });
+$('.Payment').click(function(){
+  $('.Payment').removeClass('__Active');
+  $('.Payment').addClass('false');
+  $(this).addClass('__Active');
+  $(this).removeClass('false');  
+});

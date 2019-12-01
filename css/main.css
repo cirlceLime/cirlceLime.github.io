@@ -22859,6 +22859,8 @@ div.ant-typography-edit-content {
     padding-bottom: 5px; }
     .MainHeader .MainHeader_Lower a {
       margin-right: 15px; }
+      .MainHeader .MainHeader_Lower a:hover {
+        color: white; }
     .MainHeader .MainHeader_Lower .MainHeader_Lower_Menu {
       padding-left: 25px; }
       .MainHeader .MainHeader_Lower .MainHeader_Lower_Menu .ant-menu-horizontal {
