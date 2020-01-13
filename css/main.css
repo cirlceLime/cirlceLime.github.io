@@ -546,10 +546,14 @@ body {
   z-index: 3;
   text-align: center; }
 
-@media all and (max-width: 768) {
+@media all and (max-width: 768px) {
   .welcome__text {
     font-size: 25px;
-    width: 70%; } }
+    width: 80%; } }
+
+@media all and (max-width: 550px) {
+  .logo img {
+    max-width: 100%; } }
 
 @media all and (max-width: 375px) {
   .welcome__text {
