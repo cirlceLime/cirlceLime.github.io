@@ -503,14 +503,7 @@ body {
             flex-direction: column; }
   .section__column + .section__column {
     margin-left: 0;
-    margin-top: 30px; }
-  .welcome__text {
-    font-size: 25px;
-    width: 70%; } }
-
-@media all and (max-width: 375px) {
-  .welcome__text {
-    font-size: 20px; } }
+    margin-top: 30px; } }
 
 .welcome {
   position: relative;
@@ -552,6 +545,15 @@ body {
   position: relative;
   z-index: 3;
   text-align: center; }
+
+@media all and (max-width: 768) {
+  .welcome__text {
+    font-size: 25px;
+    width: 70%; } }
+
+@media all and (max-width: 375px) {
+  .welcome__text {
+    font-size: 20px; } }
 
 .reviews {
   display: -webkit-box;
