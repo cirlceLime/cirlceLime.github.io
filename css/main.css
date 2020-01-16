@@ -250,14 +250,13 @@ body {
 .toggle-block {
   position: absolute;
   opacity: 0;
-  padding: 15px;
-  padding-top: 20px;
   -webkit-transform: translateX(-50px);
           transform: translateX(-50px);
   z-index: -1;
-  -webkit-transition: 0.3s all ease;
-  transition: 0.3s all ease; }
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease; }
   .toggle-block.active {
+    position: relative;
     opacity: 1;
     z-index: 5;
     -webkit-transform: translateX(0);
@@ -342,7 +341,7 @@ body {
 
 .map {
   width: 100%;
-  height: 500px; }
+  height: 100vh; }
 
 .main-nav {
   border-bottom: 2px solid #888;
@@ -798,7 +797,7 @@ body {
   -webkit-box-align: center;
           align-items: center;
   height: 40px;
-  background: rgba(0, 0, 0, 0.05); }
+  background: white; }
   .prices__column p {
     text-align: center; }
   .prices__column .price {

@@ -11,6 +11,7 @@ $(document).ready(function() {
     const toggleHeight = $(this)
       .siblings(toggleBlock)
       .height();
+    /*
     if ($(this).hasClass("active")) {
       $(this)
         .parent()
@@ -21,7 +22,7 @@ $(document).ready(function() {
         .parent()
         .next()
         .css("margin-top", "10px");
-    }
+    } */
   });
 });
 const burgerButton = document.querySelector(".mobile-menu");
