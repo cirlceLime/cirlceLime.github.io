@@ -1,5 +1,8 @@
 // Импортируем другие js-файлы
 $(document).ready(function() {
+  $(".level-link").hover(function() {
+    $(".level-content").toggleClass("active");
+  });
   const toggler = $(".toggle-link");
   const toggleBlock = $(".toggle-block");
   $(toggler).click(function(e) {
