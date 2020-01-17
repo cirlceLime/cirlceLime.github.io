@@ -28,6 +28,21 @@ $(document).ready(function() {
     } */
   });
 });
+$(document).ready(function() {
+  $(".main-nav__link").on("click", function(event) {
+    //отменяем стандартную обработку нажатия по ссылке
+    event.preventDefault();
+
+    //забираем идентификатор бока с атрибута href
+    var id = $(this).attr("href"),
+      //узнаем высоту от начала страницы до блока на который ссылается якорь
+      top = $(id).offset().top;
+
+    //анимируем переход на расстояние - top за 1500 мс
+    $("body,html").animate({ scrollTop: top }, 1500);
+  });
+});
+
 const burgerButton = document.querySelector(".mobile-menu");
 let menuStatus = false;
 burgerButton.addEventListener("click", () => {
@@ -54,7 +69,7 @@ reviewMark.forEach(element => {
   sum += +element.innerHTML / reviewMark.length;
 });
 document.querySelector(".result-mark").innerHTML = sum.toFixed(2);
-let reviewList = document.querySelectorAll(".reviews__item");
+/*let reviewList = document.querySelectorAll(".reviews__item");
 reviewList.forEach(function(item, i) {
   console.log(i);
   if (i < 3) {
@@ -62,6 +77,7 @@ reviewList.forEach(function(item, i) {
     console.log("123");
   }
 });
+
 document.querySelector(".more_link a").addEventListener("click", function(e) {
   e.preventDefault();
   let activeReviews = document.querySelectorAll(".reviews__item.active");
@@ -74,7 +90,7 @@ document.querySelector(".more_link a").addEventListener("click", function(e) {
   if (!hiddenReview) {
     console.log("123");
   }
-});
+}); */
 /*
 const reviewDesk = document.querySelectorAll(".reviews__desc p");
 const reviewLenght = 150;
@@ -97,3 +113,25 @@ reviewDesk.forEach(function(item, i) {
   });
 });
 */
+
+let videoButton = document.querySelector(".video-review__button"),
+  reviewList = document.querySelector(".reviews__list"),
+  videoWrapper = document.querySelector(".video-review__wrapper");
+
+videoButton.addEventListener("click", function(event) {
+  event.preventDefault();
+  let targetButton = event.target;
+  if (targetButton.classList.contains("active")) {
+    targetButton.classList.remove("active");
+    reviewList.classList.remove("hide");
+    videoWrapper.classList.remove("active");
+    videoButton.textContent = '"Живой отзыв"';
+    videoButton.classList.add("video");
+  } else {
+    targetButton.classList.add("active");
+    reviewList.classList.add("hide");
+    videoWrapper.classList.add("active");
+    videoButton.textContent = "Отзывы";
+    videoButton.classList.remove("video");
+  }
+});

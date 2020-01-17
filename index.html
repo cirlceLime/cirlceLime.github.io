@@ -18,15 +18,15 @@
 			<div class="mobile-menu__burger"></div>
 		</div>
 		<ul class="main-nav__list">
-			<li class="main-nav__item"><a class="main-nav__link" href="">о нас</a></li>
-			<li class="main-nav__item"><a class="main-nav__link" href="">контакты</a></li>
+			<li class="main-nav__item"><a class="main-nav__link" href="#about-section">о нас</a></li>
+			<li class="main-nav__item"><a class="main-nav__link" href="#contacts-section">контакты</a></li>
 			<li class="main-nav__item"><a class="main-nav__link" href="">наши преподаватели</a></li>
-			<li class="main-nav__item"><a class="main-nav__link" href="">наш офис</a></li>
+			<li class="main-nav__item"><a class="main-nav__link" href="#photo-section">наш офис</a></li>
 			<li class="main-nav__item main-nav__logo"><a href="/" class="main-nav__link"><img src="img/logo.png" alt=""></a></li>
-			<li class="main-nav__item"><a class="main-nav__link" href="">отзывы</a></li>
-			<li class="main-nav__item"><a class="main-nav__link" href="">цены</a></li>
-			<li class="main-nav__item"><a class="main-nav__link" href="">мы предлагаем</a></li>
-			<li class="main-nav__item"><a class="main-nav__link" href="">расположение</a></li>
+			<li class="main-nav__item"><a class="main-nav__link" href="#review-section">отзывы</a></li>
+			<li class="main-nav__item"><a class="main-nav__link" href="#price-section">цены</a></li>
+			<li class="main-nav__item"><a class="main-nav__link" href="#offer-section">мы предлагаем</a></li>
+			<li class="main-nav__item"><a class="main-nav__link" href="#map-section">расположение</a></li>
 		</ul>
 		<div class="logo-mobile">
 			<img src="img/logo.png" alt="">
@@ -68,7 +68,7 @@
 		</p>
 	</div>
 </section>
-<section class="section">
+<section id="about-section" class="section">
 	<div class="container">	
 		<h1 class="section__title">	
 			Выбирайте эффективные курсы! 
@@ -115,7 +115,7 @@
 		</div>
 	</div>
 </section>
-<section class="section">
+<section id="offer-section" class="section">
 	<div class="container">	
 		<h1 class="section__title">	
 			английский / немецкий язык
@@ -185,23 +185,22 @@
 		</div>
 	</div>
 </section>
-<section class="section">
+<section id="review-section" class="section">
 	<div class="container">
             <h1 class="section__title">
             отзывы
             </h1>
             <div class="section__row section__content">
-                <div class="section__column left">
-                    <div class="img__wrapper">
-                        <img src="img/youtube.png" alt="">
-                    </div>
-                    <div class="section__row btn-row">
-						<button class="btn btn-two">
-						<a class="btn__link" href="">Записаться на курс</a>
-					</div>
-                </div>
                 <div class="section__column right">
                     <div class="reviews">
+						<div class="video-review">
+							<a href="" class="video-review__button video">
+								"Живой" отзыв
+							</a>
+							<div class="video-review__wrapper">
+								<iframe class="youtube-video"  src="https://www.youtube.com/embed/RHQC4fAhcbU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
                         <ul class="reviews__list">
                             <li class="reviews__item">
                                 <div class="reviews__img">
@@ -213,9 +212,6 @@
                                         <p class="date-time">
                                             <span class="date">
                                                 10.02.2020
-                                            </span>
-                                            <span class="time">
-                                                22:48
                                             </span>
                                         </p>
                                     </div>
@@ -240,9 +236,6 @@
                                             <span class="date">
                                                 28.02.2020
                                             </span>
-                                            <span class="time">
-                                                22:48
-                                            </span>
                                         </p>
                                     </div>
                                     <div class="reviews__desc">
@@ -265,9 +258,6 @@
                                         <p class="date-time">
                                             <span class="date">
                                                 29.02.2020
-                                            </span>
-                                            <span class="time">
-                                                22:48
                                             </span>
                                         </p>
                                     </div>
@@ -292,9 +282,6 @@
                                             <span class="date">
                                                 05.03.2020
                                             </span>
-                                            <span class="time">
-                                                22:48
-                                            </span>
                                         </p>
                                     </div>
                                     <div class="reviews__desc">
@@ -318,9 +305,7 @@
                                             <span class="date">
 												10.03.2020
                                             </span>
-                                            <span class="time">
-                                                22:48
-                                            </span>
+
                                         </p>
                                     </div>
                                     <div class="reviews__desc">
@@ -338,7 +323,8 @@
                             <a href="">
                                 Еще отзывы
                             </a>
-                        </div>
+						</div>
+						
                         <div class="reviews__sumary">
                             <p>Средняя оценка:
                                 <span class="result-mark mark">4.97</span> из
@@ -350,7 +336,7 @@
             </div>
         </div>
 </section>
-<section class="section">
+<section id="price-section" class="section">
 	<div class="container">	
 		<h1 class="section__title">	
 			цены
@@ -501,7 +487,7 @@
 		</div>
 	</div>
 </section>
-<section class="section">
+<section id="photo-section" class="section">
 	<h1 class="section__title">
 	Фото
 	</h1>
