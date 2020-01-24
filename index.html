@@ -75,16 +75,64 @@
 		</h1>
 		<div class="section__sub-title">
 			<p>Мы нацелены на конкретный результат и уверенны в своих силах. В случае несдачи языкового экзамена, возвращаем деньги. <span class="level-link underline-text">Приходите к нам, и мы поможем определить Ваш уровень языка или сделайте это сами по нашим инструкциям. </span></p>
-			<div class="level-content">
+			<div class="level-content active">
 				<ul class="level-list">
-					<li class="level-list__item">A1</li>
-					<li class="level-list__item">A2</li>
-					<li class="level-list__item">B1</li>
-					<li class="level-list__item">B2</li>
-					<li class="level-list__item">C1</li>
-					<li class="level-list__item">C2</li>
-					<li class="level-list__item">Медицинский немецкий</li>
-					<li class="level-list__item">Юридический немецкий</li>
+					<li class="level-list__item">A1
+						<div class="level-list__desc">
+							Очень простые, повседневные фразы
+							Тщательно сформулированную, медленную речь с длинными паузами
+							Очень короткие, простые тексты, знакомые имена и слова
+						</div>
+					</li>
+					<li class="level-list__item">A2
+						<div class="level-list__desc">
+							Темы, связанные с простыми личными, семейными и рабочими вопросами
+							Достаточно для удовлетворения потребностей с медленной, четкой речью
+							Краткие, простые тексты на знакомую тему
+						</div>
+					</li>
+					<li class="level-list__item">B1
+						<div class="level-list__desc">
+							Основные пункты по общим темам на работе, в школе или в путешествии
+							Общие и конкретные детали, преподносимые четкой речью говорящего
+							Тексты с обилием фактов по интересующим предметам
+						</div>
+					</li>
+					<li class="level-list__item">B2
+						<div class="level-list__desc">
+							Основные идеи сложного текста
+							Стандартный разговорный язык: как в жизни, так и в медиа
+							Тексты с разнообразным лексиконом и высокой степенью автономности
+						</div>
+					</li>
+					<li class="level-list__item">C1
+						<div class="level-list__desc">
+							Более длинные тексты и их скрытое значение
+							Продолжительную речь на абстрактные темы с относительной легкостью
+							Детали в сложных текстах, даже если они не относятся к вашей собственной специальности
+						</div>
+					</li>
+					<li class="level-list__item">C2
+						<div class="level-list__desc">
+							Всю информацию на слух или в текстовом формате с легкостью
+							Всю речь в быстром темпе
+							Абстрактный, сложный по структуре текст и литературные произведения
+						</div>
+					</li>
+					<li class="level-list__item">Медицинский немецкий
+						<div class="level-list__desc">
+							Очень простые, повседневные фразы
+							Тщательно сформулированную, медленную речь с длинными паузами
+							Очень короткие, простые тексты, знакомые имена и слова
+						</div>
+					</li>
+					<li class="level-list__item">Юридический немецкий
+						<div class="level-list__desc">
+							Очень простые, повседневные фразы
+							Тщательно сформулированную, медленную речь с длинными паузами
+							Очень короткие, простые тексты, знакомые имена и слова
+						</div>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -152,7 +200,7 @@
 						<li class="custom-list__item">
 							<a href="" class="toggle-link">Языковые клубы</a>
 							<ul class="toggle-block sub-list">
-								<li class="sub-list__item">Каждоые воскресенье</li>
+								<li class="sub-list__item">Каждое воскресенье</li>
 								<li class="sub-list__item"><span class="number">100 </span> грн</li>
 							</ul>
 						</li>
@@ -626,5 +674,44 @@
     </div>
   </div>
 </footer>
+<div class="contact-form modal-block__open">
+  Есть вопрос ?
+</div>
+<div class="modal-block">
+  <div class="modal-block__end">
+      
+  </div>
+  <div class="modal-block__content">
+    <div class="modal-block__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+    <div class="modal-block__titleBlock">
+      <h3 class="modal-block__title">
+        Остался вопрос ?
+      </h3>
+      <h4 class="modal-block__subTitle">
+        Заполните форму ниже <br />
+        Мы с радостью поможем вам
+      </h4>
+    </div>
+    <form id="contact-form" action="">
+      <div class="input__wrapper">
+        <label for="">Ваше Имя : </label>
+        <input autocomplete="off" id="name" type="text" pattern="\D" placeholder="Иван Иванов" />
+      </div>
+      <div class="input__wrapper">
+        <label for="">Ваш номер телефона : </label>
+        <input autocomplete="off" type="text" id="tel" class="telephone" placeholder="+380 (99) 999-99-99" />
+      </div>
+      <div class="input__wrapper">
+        <label for="">Комментарий : </label>
+        <input class="comment" name="" id="" placeholder="Комментарий к заявке"></input с>
+      </div>
+    </form c>
+    <div class="submit">
+      <a href="#" class="submit__link">Отправить заявку</a>
+    </div>
+  </div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/main.js"></script>
