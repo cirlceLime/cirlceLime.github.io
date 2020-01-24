@@ -367,7 +367,9 @@ body {
 .level-list__item {
   text-align: left; }
   .level-list__item .level-list__desc {
-    opacity: 0; }
+    overflow: hidden;
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease; }
   .level-list__item.active .level-list__desc {
     opacity: 1;
     height: 100px; }
