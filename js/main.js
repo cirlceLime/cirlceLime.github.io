@@ -45,6 +45,7 @@ $(document).ready(function(){
     });
     $('.phone-trigger').click(function(){
         $('.header .phone-list').toggleClass('active');
+    });
 });
 
 let calculatorItemsList = document.querySelectorAll('.item__select');
