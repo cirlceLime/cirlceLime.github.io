@@ -106,7 +106,7 @@ h2.title {
           align-items: center;
   -webkit-box-pack: center;
           justify-content: center; }
-  h2.title svg {
+  h2.title img {
     height: 50px;
     width: 50px;
     margin-right: 15px; }
@@ -470,6 +470,8 @@ h2.title {
     font-weight: 600; }
 
 @media screen and (min-width: 768px) {
+  #section-welcome {
+    background-position: -405px center; }
   .main-nav {
     border-bottom: 2px solid;
     border-bottom-color: transparent;
@@ -500,7 +502,7 @@ h2.title {
 
 @media screen and (max-width: 768px) {
   #section-welcome {
-    min-height: 761px; }
+    height: 761px; }
   .logo-mobile {
     display: block;
     position: absolute;
@@ -587,6 +589,8 @@ h2.title {
     padding: 0 15px; } }
 
 @media screen and (max-width: 425px) {
+  #section-welcome {
+    background-position: -535px center; }
   .container {
     padding: 0 5px; }
   h2.title {
@@ -611,7 +615,13 @@ h2.title {
     font-size: 20px; } }
 
 @media screen and (max-width: 375px) {
+  #section-welcome {
+    background-position: -560px center; }
   #section-contact .column {
     padding: 0 5px; }
   #section-contact .column:nth-child(1) {
     padding: 0 5px; } }
+
+@media screen and (max-width: 320px) {
+  #section-welcome {
+    background-position: -585px center; } }
