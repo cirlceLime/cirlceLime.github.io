@@ -589,7 +589,9 @@ h2.title {
   .mt-30 {
     margin-top: 15px; }
   #section-welcome h1.title {
-    display: none; } }
+    display: none; }
+  #form-contact h3 {
+    font-size: 20px; } }
 
 @media screen and (max-width: 375px) {
   #section-contact .column {
