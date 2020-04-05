@@ -165,6 +165,9 @@ h2.title {
 .eapps-instagram-feed-container {
   padding: 30px 0; }
 
+.logo-mobile {
+  display: none; }
+
 .main-nav {
   position: fixed;
   display: -webkit-box;
@@ -364,8 +367,6 @@ h2.title {
         padding-bottom: 5px; }
         #section-info .advantages-list .advantage__desc p {
           margin-bottom: 10px; }
-          #section-info .advantages-list .advantage__desc p:first-child {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
         #section-info .advantages-list .advantage__desc a {
           color: #fff;
           font-size: 16px; }
@@ -488,6 +489,14 @@ h2.title {
     width: 80%; } }
 
 @media screen and (max-width: 768px) {
+  .logo-mobile {
+    display: block;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    margin-left: -125px; }
+    .logo-mobile img {
+      width: 250px; }
   .row.two-col .column {
     flex-basis: 100%; }
   #section-advantages .row {
@@ -507,8 +516,8 @@ h2.title {
   #section-contact .row {
     flex-wrap: wrap;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-            flex-direction: column-reverse; }
+    -webkit-box-direction: normal;
+            flex-direction: column; }
   #section-contact .column + .column {
     margin-bottom: 30px; }
   #section-contact .column {
@@ -568,14 +577,19 @@ h2.title {
   #section-advantages .advantage {
     text-align: left; }
     #section-advantages .advantage__desc {
-      max-width: 100%;
-      padding: 0 30px; }
+      max-width: 100%; }
+  #section-advantages .column:nth-child(1) {
+    display: none; }
+  #section-advantages .column + .column {
+    margin-bottom: 0; }
   .section__img img {
     width: 100%; }
   h1.title {
     font-size: 48px; }
   .mt-30 {
-    margin-top: 15px; } }
+    margin-top: 15px; }
+  #section-welcome h1.title {
+    display: none; } }
 
 @media screen and (max-width: 375px) {
   #section-contact .column {
