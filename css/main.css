@@ -470,8 +470,6 @@ h2.title {
     font-weight: 600; }
 
 @media screen and (min-width: 768px) {
-  #section-welcome {
-    background-position: -405px center; }
   .main-nav {
     border-bottom: 2px solid;
     border-bottom-color: transparent;
@@ -501,6 +499,8 @@ h2.title {
     width: 80%; } }
 
 @media screen and (max-width: 768px) {
+  #section-welcome {
+    background-position: -405px center; }
   #section-welcome {
     height: 761px; }
   .logo-mobile {
