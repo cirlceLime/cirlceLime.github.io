@@ -517,7 +517,8 @@ h2.title {
     flex-wrap: wrap;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-            flex-direction: column-reverse; }
+            flex-direction: column-reverse;
+    padding: 0 5px; }
   #section-advantages .column + .column {
     margin-left: 0;
     margin-bottom: 60px; }
