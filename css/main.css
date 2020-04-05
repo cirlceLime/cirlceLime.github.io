@@ -159,6 +159,12 @@ h2.title {
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg); }
 
+.eapps-instagram-feed-title {
+  display: none !important; }
+
+.eapps-instagram-feed-container {
+  padding: 30px 0; }
+
 .main-nav {
   position: fixed;
   display: -webkit-box;

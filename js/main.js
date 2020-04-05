@@ -24,4 +24,6 @@ $(document).ready(function() {
             $(nav).removeClass('active');
         }
     });
+    $('.eapps-instagram-feed-posts-grid-load-more-text eapps-instagram-feed-posts-grid-load-more-text-visible').textContent = "Загрузить еще";
+
 });
