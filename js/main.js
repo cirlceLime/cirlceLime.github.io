@@ -1,29 +1,88 @@
 // Импортируем другие js-файлы
-$(document).ready(function() {
-    const navToggle = $('.nav-toggle'),
-        navList = $('.nav-list'),
-        nav = $('.main-nav');
+document.addEventListener('DOMContentLoaded', () => {
 
-    $(navToggle).click(function(e) {
-        e.preventDefault()
-        $(this).toggleClass('active');
-        $(navList).toggleClass('active');
+    const sliderWork = document.querySelector('.slider-work'),
+        navMobile = document.querySelector('.main-nav_mobile'),
+        navShow = document.querySelector('.main-nav__burger'),
+        navHide = document.querySelector('.nav-close'),
+        body = document.querySelector('body');
+
+
+    navShow.addEventListener('click', (e) => {
+        e.preventDefault();
+        navMobile.classList.add('active');
+        body.classList.add('overflow');
     });
 
-    const $page = $('html, body');
-    $('.main-nav a[href*="#"]').click(function() {
-        $page.animate({
-            scrollTop: $($.attr(this, 'href')).offset().top - 60
-        }, 500);
-        return false;
+    navHide.addEventListener('click', (e) => {
+        e.preventDefault();
+        navMobile.classList.remove('active');
+        body.classList.remove('overflow');
     });
-    $(document).scroll(function() {
-        if ($(window).scrollTop() > 70) {
-            $(nav).addClass('active');
+
+    slideInit(sliderWork);
+
+    const controlArray = sliderWork.querySelectorAll('.slider__button'),
+        slidesArr = Array.prototype.slice.call(sliderWork.querySelectorAll('.slider__item')),
+        isActive = item => item.classList.contains('slider__item-active');
+
+    controlArray.forEach(elem => {
+        elem.addEventListener('click', () => {
+            let currentArray = elem.parentNode.parentNode,
+                activeIndex = slidesArr.findIndex(isActive);
+            elem.classList.contains('next') ? slideShow(currentArray.querySelectorAll('.slider__item'), activeIndex + 1) : slideShow(currentArray.querySelectorAll('.slider__item'), activeIndex - 1);
+        });
+    });
+});
+
+window.addEventListener('scroll', () => {
+    const body = document.body,
+        html = document.documentElement,
+        mainNav = document.querySelector('.main-nav');
+    body.scrollTop > mainNav.clientHeight || html.scrollTop > mainNav.clientHeight ? mainNav.classList.add('active') : mainNav.classList.remove('active');
+});
+
+const slideInit = (slider) => {
+
+    const slidesArr = slider.querySelectorAll(`.slider__item`);
+
+    slideShow(slidesArr, 0);
+}
+
+
+const slideShow = (slidesArr, n) => {
+
+    slideHide(slidesArr);
+
+    const className = 'slider__item';
+
+    slidesArr.forEach((element, index) => {
+        n < 0 ? n = slidesArr.length - 1 : false;
+        n > slidesArr.length - 1 ? n = 0 : false;
+        index == n ? element.classList.add(`${className}-active`) : false;
+        index == (n + 1) ? element.classList.add(`${className}-next`) : false;
+        if (n == slidesArr.length - 1) {
+            console.log('123');
+            if (index == 0) {
+                element.classList.add(`${className}-next`);
+            }
+        }
+        if (n == 0) {
+            if (index == (slidesArr.length - 1)) {
+                element.classList.add(`${className}-prev`)
+            }
         } else {
-            $(nav).removeClass('active');
+            if (index == (n - 1)) {
+                element.classList.add(`${className}-prev`)
+            }
         }
     });
-    $('.eapps-instagram-feed-posts-grid-load-more-text eapps-instagram-feed-posts-grid-load-more-text-visible').textContent = "Загрузить еще";
+}
 
-});
+
+const slideHide = (slidesArr) => {
+    const className = 'slider__item';
+    slidesArr.forEach((element) => {
+        element.classList.remove(`${className}-active`, `${className}-prev`, `${className}-next`);
+    });
+};
