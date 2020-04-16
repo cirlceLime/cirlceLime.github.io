@@ -830,7 +830,20 @@ body {
        object-fit: cover; }
   .slider .next,
   .slider .prev {
-    opacity: 1; }
+    opacity: 1;
+    height: 50px;
+    background-color: #34495E;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -25px; }
+  .slider .next::before,
+  .slider .prev::before {
+    font-size: 20px;
+    top: 1px; }
+  .slider .next::before {
+    left: 3px; }
+  .slider .prev::before {
+    right: 2px; }
   .main-nav_fixed {
     height: 60px; }
   .main-nav_mobile .main-nav__list .custom-list__item {
