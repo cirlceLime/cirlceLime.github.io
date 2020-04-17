@@ -100,7 +100,7 @@ window.addEventListener('scroll', () => {
 $(document).ready(function() {
     // Optimalisation: Store the references outside the event handler:
     var $window = $(window);
-    $(".main-nav").on("click", "a[href*='#']", function(event) {
+    $("a[href*='#']").on("click", function(event) {
         event.preventDefault();
         $('.main-nav').removeClass('active');
         $('body').removeClass('overflow');
@@ -1257,7 +1257,7 @@ const data = {
                     "demontagPrice": 80
                 },
                 {
-                    "demontagName": "Демонта�� линолеума,ковролина на клею",
+                    "demontagName": "Демонтаж линолеума,ковролина на клею",
                     "demontagMeasure": "м2",
                     "demontagPrice": 125
                 },
